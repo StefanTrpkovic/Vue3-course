@@ -1,0 +1,27 @@
+{
+  "name": "vue3-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanTrpkovic/Vue3-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefanTrpkovic/Vue3-course/issues"
+  },
+  "homepage": "https://github.com/StefanTrpkovic/Vue3-course#readme",
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "json-server": "^0.17.1"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  }
+}
