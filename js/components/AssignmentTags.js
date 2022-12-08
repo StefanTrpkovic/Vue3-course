@@ -7,7 +7,7 @@ export default {
         :class="{
           'border-blue-500 text-blue-500': tag === currentTag
         }"
-        @click="$emit('tag', tag)"
+        @click="$emit('update:currentTag', tag)"
       >
         {{ tag }}
       </button>

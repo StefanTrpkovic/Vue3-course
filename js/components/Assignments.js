@@ -43,7 +43,7 @@ export default {
     methods: {
       add(newAssignment) {
         const highestNumber = Math.max(...this.assignments.map(assignment => assignment.id))
-        newAssignment && this.assignments.push({ name: newAssignment, complete: false, id: highestNumber + 1 })
+        newAssignment && this.assignments.push({ name: newAssignment, complete: false, tag: "math", id: highestNumber + 1 })
       }
     }
 }

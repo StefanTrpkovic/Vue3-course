@@ -11,7 +11,11 @@ export default {
       <section v-show="assignments.length">
       <h2 class="font-bold mb-2">{{title}} ({{assignments.length}})</h2>     
       
-      <assignment-tags :assignments="assignments" :current-tag="currentTag" @tag="currentTag=$event"></assignment-tags>
+      <assignment-tags 
+        :assignments="assignments" 
+        v-model:currentTag="currentTag"
+      >
+      </assignment-tags>
 
       <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
          <Assignment 
