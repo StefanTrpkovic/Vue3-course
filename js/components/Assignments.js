@@ -1,8 +1,10 @@
 import AssignmentList from "./AssignmentList.js";
+import AssignmentCreate from "./AssignmentCreate.js";
 
 export default {
   components: {
-    AssignmentList
+    AssignmentList,
+    AssignmentCreate
   },
   template: `
     <section class="space-y-6">
@@ -17,13 +19,7 @@ export default {
         :assignments=filters.completed
       >
       </assignment-list>
-
-      <form @submit.prevent="add">
-        <div class="border border-gray-600 text-black">
-          <input v-model="newAssignment" placeholder="New Assignment..." class="p-2"/>
-          <button type="submit" class="bg-white p-2 border-l">Add</button>
-        </div>
-      </form>
+      <assignment-create @add="add"></assignment-create>
     </section>  
   `,
 
@@ -33,8 +29,7 @@ export default {
                 { name: 'Finish project', complete: false, id: 1 },
                 { name: 'Read Chapter 4', complete: false, id: 2 },
                 { name: 'Turn in Homework', complete: false, id: 3 },
-            ],
-            newAssignment: null
+            ]
         }
     },
     computed: {
@@ -46,10 +41,9 @@ export default {
       }
     },
     methods: {
-      add() {
+      add(newAssignment) {
         const highestNumber = Math.max(...this.assignments.map(assignment => assignment.id))
-        this.newAssignment && this.assignments.push({ name: this.newAssignment, complete: false, id: highestNumber + 1 })
-        this.newAssignment = null
+        newAssignment && this.assignments.push({ name: newAssignment, complete: false, id: highestNumber + 1 })
       }
     }
 }
