@@ -1,0 +1,9 @@
+			App
+			 |
+  		    Assignments
+		     /     \
+                    /       \
+           AssignmentList AssignmentCreate
+     	    /     \
+	   /       \
+    Assignment AssignmentTags
